@@ -1,0 +1,252 @@
+/* Landing-Page */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin :0;
+  }
+  #landing-page {
+    background-color: #070707;
+    height:20vh;
+  }
+  
+  .title-background {
+    background:#070707;
+    width:fit-content;
+    margin:auto;
+    padding:10px;
+  }
+  
+  
+  
+  .title {
+    text-align: center;
+    color:#D0D3D4;
+    font-size:2em;
+  }
+  
+  /* nav-slider */
+  .nav-slider {
+    background: rgba(0,0,0,0.8);
+    padding:10px;
+    cursor:pointer;
+    position: -webkit-sticky;
+    position:sticky;
+    top:0px;
+  }
+  
+  .line {
+    background: #eee;
+    margin:5px;
+    width:30px;
+    height:3px;
+  
+  }
+  
+  .line:nth-child(1) {
+    margin-top:0;
+  }
+  
+  /* nav-slider section  */
+  .nav-slider-section {
+    background: rgba(0,0,0,0.8);
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    transform: translateX(-100%);
+  }
+  
+  .close-nav-slider {
+    border:none;
+    outline: none;
+    float:right;
+    background:transparent;
+    color:#f1C40F;
+    font-size:1.5em;
+    padding:15px;
+    cursor: pointer;
+  }
+  
+  .nav-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+  }
+  
+  .nav-links-container li {
+    text-align:center;
+    padding:10px;
+  }
+  
+  .nav-links {
+    text-decoration: none;
+    color:#eee;
+    font-size:1.5em;
+  }
+  
+  .openNav {
+    animation: openNav 0.5s forwards;
+  }
+  
+  .closeNav {
+    animation: closeNav 0.5s forwards;
+  }
+  
+  @keyframes openNav {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes closeNav {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* .menu */
+  
+  #menu, #lunch {
+    background:#9B2335;
+  }
+  
+  .menu-title {
+    color: #D0D3D4;
+    text-align: center;
+    padding:25px;
+    font-size:2em;
+  }
+  
+  p {
+    color: #eee;
+    font-size: 1.1em;
+    
+  }
+  
+  .buffet {
+    font-size:1.5em;
+    text-align: center;
+    margin:0;
+  }
+  
+  .menu-price {
+    float: right;
+  }
+  
+  .push-down {
+    padding-bottom:5px;
+  }
+  
+  /* restaurant information */
+  #restaurant-info {
+    background: #070707;
+    padding: 20px;
+  }
+  
+  .restaurant-info-title {
+    color: #D3CAC8;
+    text-align: center;
+  }
+  
+  .address, .hours {
+    font-size: 1em !important;
+    text-align: center; 
+  }
+  
+  .address:hover {
+    text-decoration: underline;
+  }
+  
+  .address-content, .business-hours, .contact-content, .delivery-content {
+    padding: 10px;
+  }
+  
+  .phone {
+    font-size: 1em !important;
+    text-align: center; 
+  }
+  
+  .delivery{
+    margin-bottom:0;
+  }
+  
+  .delivery,  a{
+    text-align: center;
+    text-decoration: none;
+    color: #eee;
+  }
+  
+  .delivery:hover a{
+    text-decoration: underline;
+  }
+  .flex-item2 {
+    display:flex;
+    justify-content: center;
+  }
+  
+  .choice {
+    padding-right:10px;
+    padding-left:10px;
+    margin:0;
+  }
+  .info-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  
+  @media(max-width:500px) {
+    #tabs {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    #lunch p {
+      font-size:1em;
+    }
+  
+    .description p{
+      display:flex;
+      flex-wrap:wrap;
+    }
+  
+    .flex-item2{
+      display:flex;
+      flex-direction: column;
+    }
+  
+    .menu-price {
+      padding-right:40px;
+      padding-bottom:10px;
+      padding-top:10px;
+    }
+  
+    #tabSection-8 .menu-price {
+      padding:0;
+      padding-left:15px;
+    }
+    
+  }
+  
+  @media screen and (min-width: 768px) {
+    .info-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .address-content, .business-hours, .contact-content {
+        border-right: 1px solid #eee;
+        padding: 30px;
+    }
+    .delivery-content {
+        padding: 30px;
+    }
+  }
